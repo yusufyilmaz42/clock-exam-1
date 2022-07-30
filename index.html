@@ -17,10 +17,33 @@
     <div class="container mt-5">
       <div class="row">
         <div class="col-sm-8 offest-sm-2">
-          <form id="user-form">
-            <input type="number" name="score" id="score" />
-            <button type="submit" class="btn btn-success">Gönder</button>
+          <form id="userForm">
+            <div class="mb-3">
+              <label class="form-label" for="username">Kullanici Adıi</label>
+              <input
+                class="form-control"
+                type="text"
+                name="username"
+                id="username"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="score">Not Bilgisi</label>
+              <input
+                class="form-control"
+                type="number"
+                name="score"
+                id="score"
+              />
+            </div>
+            <div class="mb-3">
+              <button type="reset" class="btn btn-danger">Sıfırla</button>
+              <button type="submit" class="btn btn-success">Gönder</button>
+            </div>
           </form>
+        </div>
+        <div class="col-sm-8 offest-sm-2 mt-4">
+          <ul class="list-group" id="userList"></ul>
         </div>
       </div>
     </div>
