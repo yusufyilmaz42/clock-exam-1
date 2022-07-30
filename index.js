@@ -1,11 +1,11 @@
-let info =document.querySelector("#myName")
-let isim=prompt("Lütfen isminizi giriniz!")
-info.innerHTML += `${isim}`
-
-
-function tarihsaat(){
-    let  date = new Date().toLocaleString('tr-TR'); 
-    document.getElementById('myClock').innerHTML=date
-
-}
-setInterval(tarihsaat, 1000);
+let formDOM = document.querySelector("#user-form");
+formDOM.addEventListener(
+  "submit",
+  (formSubmit = () => {
+    event.preventDefault();
+    console.log("İşlem Gerçekleşti.");
+    let scoreDOM = document.querySelector("#score");
+    console.log(scoreDOM.value);
+    localStorage.setItem(`score`, scoreDOM.value);
+  })
+);
